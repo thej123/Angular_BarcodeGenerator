@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'app works Again!';
+  x: number = 7;
+  y: number = 9;
+  myStr: string = "Thej";
+  user = {
+    firstName: 'Darth',
+    lastName: 'Vader'
+  }
+  myBoolean = true;
+  myArr = [1,2,3,4,5];
+  color = 'red';
+  switch: boolean = true;
 }
