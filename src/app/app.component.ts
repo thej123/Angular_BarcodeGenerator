@@ -6,16 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works Again!';
-  x: number = 7;
-  y: number = 9;
-  myStr: string = "Thej";
-  user = {
-    firstName: 'Darth',
-    lastName: 'Vader'
-  }
-  myBoolean = true;
-  myArr = [1,2,3,4,5];
-  color = 'red';
-  switch: boolean = true;
+  emails: Array<{ email: (string), importance: (boolean), subject: (string), content: (string) }> = [
+    {
+      email: 'bill@gates.com',
+      importance: true,
+      subject: 'New Windows',
+      content: 'Windows XI will launch in year 2100'
+    },
+    {
+      email: 'ada@gates.com',
+      importance: true,
+      subject: 'New Windows',
+      content: 'Windows XI will launch in year 2100'
+    },
+    {
+      email: 'john@gates.com',
+      importance: false,
+      subject: 'New Windows',
+      content: 'Windows XI will launch in year 2100'
+    },
+    {
+      email: 'gabe@gates.com',
+      importance: false,
+      subject: 'New Windows',
+      content: 'Windows XI will launch in year 2100'
+    }
+  ]
 }
