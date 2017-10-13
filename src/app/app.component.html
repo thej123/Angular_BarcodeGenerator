@@ -1,23 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:left">
   <h1>
-    Dojo Mail<br>
+    Retro Barcode Generator<br>
   </h1>
-  <table>
-    <tr>
-      <th>Email</th>
-      <th>Importance</th>
-      <th>Subject</th>
-      <th>Content</th>
-    </tr>
-    <tr *ngFor = 'let num of emails'>
-      <td>{{num.email | lowercase}}</td>
-      <td *ngIf='num.importance'>High</td>
-      <td *ngIf='!num.importance'>Low</td>
-      <td>{{num.subject}}</td>
-      <td>{{num.content}}</td>
-    </tr>
-  </table>
+  <div class="barrcode" [ngStyle]="{'background-color': randomColors[0]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[1]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[2]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[3]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[4]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[5]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[6]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[7]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[8]}"></div>
+  <div class="barrcode"[ngStyle]="{'background-color': randomColors[9]}"></div>
+
   <h2 *ngIf='myBoolean'>Show this!</h2>
   <h2 *ngIf='!myBoolean'>Dont Show this!</h2>
 

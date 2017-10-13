@@ -6,30 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  emails: Array<{ email: (string), importance: (boolean), subject: (string), content: (string) }> = [
-    {
-      email: 'bill@gates.com',
-      importance: true,
-      subject: 'New Windows',
-      content: 'Windows XI will launch in year 2100'
-    },
-    {
-      email: 'ada@gates.com',
-      importance: true,
-      subject: 'New Windows',
-      content: 'Windows XI will launch in year 2100'
-    },
-    {
-      email: 'john@gates.com',
-      importance: false,
-      subject: 'New Windows',
-      content: 'Windows XI will launch in year 2100'
-    },
-    {
-      email: 'gabe@gates.com',
-      importance: false,
-      subject: 'New Windows',
-      content: 'Windows XI will launch in year 2100'
-    }
-  ]
+  randomColors = randomGen()
+}
+
+function randomGen() {
+  var randomColors = ["AntiqueWhite", "Chartreuse", "Chocolate", "Cyan", "DarkGreen", "DarkOrchid", "DeepPink", "Fuchsia", "Gold", "Red"]
+  for (var i=randomColors.length-1; i > 0; i--) {
+    let index = Math.floor(Math.random()*i) + 1;
+    let temp = randomColors[i];
+    randomColors[i] = randomColors[index];
+    randomColors[index] = temp;
+  }
+  let x = Math.floor(Math.random()*randomColors.length-1) + 1;
+  let temp = randomColors[x];
+  randomColors[x] = randomColors[0];
+  randomColors[0] = temp;
+  return randomColors;
 }
